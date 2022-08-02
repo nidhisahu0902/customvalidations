@@ -1,0 +1,15 @@
+﻿@model customValidations.Models.Employee
+<html>
+    <section>
+         @using (Html.BeginForm("","",FormMethod.Post))
+            {
+                @Html.ValidationSummary()
+
+                @Html.EditorFor(x=>x.Name) <br /><br />
+                @Html.EditorFor(x=>x.Message) <br /><br />
+
+                <input type="submit" value="submit" />
+
+         }
+    </section>
+</html>
